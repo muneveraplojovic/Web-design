@@ -1,0 +1,20 @@
+[
+    {
+        "broj_kartice": "4532756279624069",
+        "ime": "John Doe",
+        "datum_isticanja": "2023-05",
+        "CVV": "123"
+    },
+    {
+        "broj_kartice": "4916474820126744",
+        "ime": "Jane Doe",
+        "datum_isticanja": "2022-11",
+        "CVV": "456"
+    },
+    {
+        "broj_kartice": "349186366573982",
+        "ime": "Alice Smith",
+        "datum_isticanja": "2024-09",
+        "CVV": "789"
+    }
+]

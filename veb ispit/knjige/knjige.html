@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Tracking App</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1>Book Tracking App</h1>
+      <div id="books">
+        <h2>Available Books</h2>
+        <ul id="available-books"></ul>
+      </div>
+      <div id="readers">
+        <h2>Readers</h2>
+        <ul id="reader-list"></ul>
+      </div>
+    </div>
+
+    <script src="knjige.js">
+      // class Book {
+      //   constructor(title, author, pageCount) {
+      //     this.title = title;
+      //     this.author = author;
+      //     this.pageCount = pageCount;
+      //     this.currentPage = 0;
+      //   }
+      // }
+
+      // class Reader {
+      //   constructor(name) {
+      //     this.name = name;
+      //     this.favoriteBooks = [];
+      //   }
+
+      //   markPageRead(book, page) {
+      //     book.currentPage = page;
+      //   }
+      // }
+
+      // class Library {
+      //   constructor() {
+      //     this.books = [];
+      //     this.readers = [];
+      //   }
+
+      //   addBook(book) {
+      //     this.books.push(book);
+      //   }
+
+      //   addReader(reader) {
+      //     this.readers.push(reader);
+      //   }
+
+      //   searchBooks(keyword) {
+      //     return this.books.filter(
+      //       (book) =>
+      //         book.title.toLowerCase().includes(keyword.toLowerCase()) ||
+      //         book.author.toLowerCase().includes(keyword.toLowerCase())
+      //     );
+      //   }
+      // }
+
+      // const library = new Library();
+
+      // // Adding some books
+      // const book1 = new Book("The Great Gatsby", "F. Scott Fitzgerald", 180);
+      // const book2 = new Book("To Kill a Mockingbird", "Harper Lee", 281);
+      // const book3 = new Book("1984", "George Orwell", 328);
+
+      // library.addBook(book1);
+      // library.addBook(book2);
+      // library.addBook(book3);
+
+      // // Adding readers
+      // const reader1 = new Reader("Alice");
+      // const reader2 = new Reader("Bob");
+
+      // library.addReader(reader1);
+      // library.addReader(reader2);
+
+      // // Marking pages as read
+      // reader1.markPageRead(book1, 50);
+      // reader1.markPageRead(book2, 100);
+      // reader2.markPageRead(book1, 30);
+
+      // // Displaying books
+      // const availableBooksElement = document.getElementById("available-books");
+      // library.books.forEach((book) => {
+      //   const li = document.createElement("li");
+      //   li.textContent = `${book.title} by ${book.author} - Current Page: ${book.currentPage}`;
+      //   availableBooksElement.appendChild(li);
+      // });
+
+      // // Displaying readers
+      // const readerListElement = document.getElementById("reader-list");
+      // library.readers.forEach((reader) => {
+      //   const li = document.createElement("li");
+      //   li.textContent = `${
+      //     reader.name
+      //   } - Favorite Books: ${reader.favoriteBooks
+      //     .map((book) => book.title)
+      //     .join(", ")}`;
+      //   readerListElement.appendChild(li);
+      // });
+    </script>
+  </body>
+</html>

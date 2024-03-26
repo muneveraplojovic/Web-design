@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+</head>
+<body>
+    <h1>Currency Converter</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Currency</th>
+                <th>Exchange Rate (1 USD)</th>
+            </tr>
+        </thead>
+        <tbody id="exchangeRates">
+            <!-- Exchange rates will be inserted here dynamically -->
+        </tbody>
+    </table>
+    <label for="rsdAmount">Enter amount in RSD:</label>
+    <input type="text" id="rsdAmount">
+    <button id="convertBtn">Convert to EUR</button>
+    <div id="result"></div>
+
+    <script src="konv.js"></script>
+</body>
+</html>

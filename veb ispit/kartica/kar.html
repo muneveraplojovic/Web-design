@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Credit Card Validator</title>
+  </head>
+  <body>
+    <h1>Credit Card Validator</h1>
+    <h2>Valid Cards</h2>
+    <ul id="validCards"></ul>
+    <h2>Invalid Cards</h2>
+    <ul id="invalidCards"></ul>
+
+    <script>
+      fetch("/kartica/kar.json")
+        .then((response) => response.json())
+        .then((data) => {
+          const validCardsList = document.getElementById("validCards");
+          const invalidCardsList = document.getElementById("invalidCards");
+
+          let validCount = 0;
+          let invalidCount = 0;
+
+          data.forEach((card) => {
+            if (validateCard(card.broj_kartice)) {
+              validCount++;
+              const li = document.createElement("li");
+              li.textContent = card.broj_kartice;
+              validCardsList.appendChild(li);
+            } else {
+              invalidCount++;
+              const li = document.createElement("li");
+              li.textContent = card.broj_kartice;
+              invalidCardsList.appendChild(li);
+            }
+          });
+
+          const totalCards = validCount + invalidCount;
+          const successRate = ((validCount / totalCards) * 100).toFixed(2);
+
+          console.log("Valid Cards:", validCount);
+          console.log("Invalid Cards:", invalidCount);
+          console.log("Success Rate:", successRate + "%");
+        })
+        .catch((error) => console.error("Error:", error));
+
+      function validateCard(cardNumber) {
+        let sum = 0;
+        let doubleUp = false;
+
+        for (let i = cardNumber.length - 1; i >= 0; i--) {
+          let digit = parseInt(cardNumber.charAt(i));
+
+          if (doubleUp) {
+            digit *= 2;
+            if (digit > 9) {
+              digit -= 9;
+            }
+          }
+
+          sum += digit;
+          doubleUp = !doubleUp;
+        }
+
+        return sum % 10 === 0;
+      }
+    </script>
+  </body>
+</html>

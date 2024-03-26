@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football League</title>
+    <link rel="stylesheet" href="tim.css">
+</head>
+<body>
+    <h1>Football League</h1>
+    <div id="teamsContainer">
+        <!-- Tabela za prikaz timova će biti ovde -->
+    </div>
+    <div id="buttons">
+        <input type="text" id="team1" placeholder="Team 1">
+        <input type="text" id="team2" placeholder="Team 2">
+        <input type="text" id="result1" placeholder="Result Team 1">
+        <input type="text" id="result2" placeholder="Result Team 2">
+        <button onclick="recordMatch()">Snimi</button>
+        <button onclick="endOfSeason()">Kraj prvenstva</button>
+    </div>
+    <ol id="winnersList"></ol>
+
+    <script src="tim.js"></script>
+</body>
+</html>
